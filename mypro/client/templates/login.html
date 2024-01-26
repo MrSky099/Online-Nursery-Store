@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NURSERY LIVE</title>
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <section class="vh-100" style="background-color: lightgray;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-6 col-md-6 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                  <form method="post" action="/client/login/">
+                       {% csrf_token %}
+
+                <div class="card-body p-5 text-center">
+<!--                      <div class="alert alert-danger">-->
+<!--                          {% if messages %}-->
+<!--                      {% for msg in messages %}-->
+<!--                      {{msg}}-->
+<!--                      {% endfor %}-->
+<!--                          {% endif %}</div>-->
+                  <h3 class="mb-5">LOGIN HERE!</h3>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" name="email" class="form-control form-control-lg" />
+                    <label class="form-label" >Enter your E-mail ID</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" name="password" class="form-control form-control-lg" />
+                    <label class="form-label">Enter your password</label>
+                  </div>
+
+                  <!-- Checkbox -->
+                  <div class="form-check d-flex justify-content-start mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="form1Example3"
+                    />
+                    <label class="form-check-label"> Remember Password </label>
+                  </div>
+
+                  <button class="btn btn-success btn-sm btn-block" type="submit">Login</button>
+
+                  <hr class="my-2">
+                  <div>
+                    <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="/client/register/" class="fw-bold text-body"><u>Register here!</u></a></p>
+                  </div>
+
+                  <!-- <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+                  <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button> -->
+
+                </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</head>
+</body>
+</html>
